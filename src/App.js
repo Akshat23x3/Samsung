@@ -11,7 +11,7 @@ import {Checkout} from "./Components/ShopComponents/Checkout"
 import styles from "./App.css"
 
 import {
-  BrowserRouter as Router, Link,
+  BrowserRouter as Router, Link, Routes, Route,
   useLocation
 } from "react-router-dom";
 
@@ -75,7 +75,17 @@ break
   return (
     <div className="App">
       <NavigationBar />
-      {component}
+      <Routes>
+        <Route path="/Samsung" element={<Home />} />
+        <Route path="/Samsung/Shop" element={<Shop />} />
+        <Route path="/Samsung/HomeAppliances" element={<HomeAppliances />} />
+        <Route path="/Samsung/Laptops" element={<Laptops />} />
+        <Route path="/Samsung/TVAAV" element={<TVAAV />} />
+        <Route path="/Samsung/Mobile" element={<Mobile />} />
+        <Route path="/Samsung/Displays" element={<Displays />} />
+        <Route path="/Samsung/Buynow" element={BuyNowHook()} />
+        <Route path="/Samsung/Checkout" element={CheckoutHook()} />
+      </Routes>
     </div>
   );
 }
