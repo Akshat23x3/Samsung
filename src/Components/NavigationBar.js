@@ -8,16 +8,16 @@ const history = useNavigate()
 
 return(
 <nav className="navigationBar">
-<a href="" onClick={() => history("/Samsung")}>
+<a onClick={() => history("/Samsung")}>
  <img className={styles.companyLogo} src={logo} alt="Company Logo" />
  </a>
 <ul>
-<li> <a href="" onClick={() => history("/Samsung/Shop")}> Shop </a> </li>
-<li> <a href="" onClick={() => history("/Samsung/Mobile")}> Mobile </a> </li>
-<li> <a href="" onClick={() => history("/Samsung/TVAAV")}> TV & AV </a> </li>
-<li> <a href="" onClick={() => history("/Samsung/HomeAppliances")}> Home Appliances </a> </li>
-<li> <a href="" onClick={() => history("/Samsung/Laptops")}> Laptops </a> </li>
-<li> <a href="" onClick={() => history("/Samsung/Displays")}> Displays </a> </li>
+<li> <a onClick={() => history("/Samsung/Shop")}> Shop </a> </li>
+<li> <a onClick={() => history("/Samsung/Mobile")}> Mobile </a> </li>
+<li> <a onClick={() => history("/Samsung/TVAAV")}> TV & AV </a> </li>
+<li> <a onClick={() => history("/Samsung/HomeAppliances")}> Home Appliances </a> </li>
+<li> <a onClick={() => history("/Samsung/Laptops")}> Laptops </a> </li>
+<li> <a onClick={() => history("/Samsung/Displays")}> Displays </a> </li>
 </ul>
 </nav>
 
