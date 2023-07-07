@@ -34,9 +34,10 @@ import showcaseimageFD2_4 from "./ShopComponents/Extras/showcaseimageFD2_3.webp"
 
 
 export class Displays extends React.Component{
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     
+    this.navigationHook = props.navhook
     this.state={
       index:0,
       imageslider:[image1],
@@ -45,43 +46,43 @@ export class Displays extends React.Component{
       showcaseindex:0,
       ssElements:[
         
-        [{images:[showcaseimage1], header:'Galaxy Book3, 39.62cm (15.6"), i5, 8GB, Intel Xe Graphics', colors:["light black"], price:74990, type:'laptop'}, 
-      {images: [showcaseimage2, showcaseimage2_2, showcaseimage2_3], header:'Galaxy Tab S8 (Wi-Fi)', colors:["pink", "black", "grey"], price:58990, type:'tablet'},
-      {images: [showcaseimage3], header:'86.8cm (34") G8 OLED Gaming Monitor with 0.1ms response', colors:['grey'], price:109399, type:'tv'},
-      {images: [showcaseimage4], header:'80.0cm (32") Gaming Monitor with WQHD resolution, 240Hz refresh rate', colors:['grey'], price:35135, type:'tv'}, 
-      {images: [showcaseimage5, showcaseimage5, showcaseimage5], header: 'Galaxy Tab S6 Lite (Wi-Fi, 4GB)', colors:["grey","blue", "pink"], price:31999, type:'tablet'}, 
-      {images: [showcaseimage6], header:"Galaxy Tab S8 Ultra (Wi-Fi)", colors:["grey"], price:99999, type:'tablet'},
+        [{images:[showcaseimage1], header:'Galaxy Book3, 39.62cm (15.6"), i5, 8GB, Intel Xe Graphics', colors:["light black"], type:'tablet', spec1:["128GB", "8GB", 74990], spec2:["256GB", "12GB", 104990]}, 
+      {images: [showcaseimage2, showcaseimage2_2, showcaseimage2_3], header:'Galaxy Tab S8 (Wi-Fi)', colors:["pink", "black", "grey"], type:'tablet', spec1:["128GB", "8GB", 58990], spec2:["256GB", "12GB", 88990]},
+      {images: [showcaseimage3], header:'86.8cm (34") G8 OLED Gaming Monitor with 0.1ms response', colors:['grey'], price:109399, type:'tv', spec1:["34''", "FHD", 109399], spec2:["45''", "QHD", 139399]},
+      {images: [showcaseimage4], header:'80.0cm (32") Gaming Monitor with WQHD resolution, 240Hz refresh rate', colors:['grey'], type:'tv', spec1:["34''", "FHD", 109399], spec2:["45''", "QHD", 139399]}, 
+      {images: [showcaseimage5, showcaseimage5, showcaseimage5], header: 'Galaxy Tab S6 Lite (Wi-Fi, 4GB)', colors:["grey","blue", "pink"], type:'tablet', spec1:["128GB", "8GB", 31999], spec2:["256GB", "12GB", 34999]}, 
+      {images: [showcaseimage6], header:"Galaxy Tab S8 Ultra (Wi-Fi)", colors:["grey"], type:'tablet', spec1:["128GB", "8GB", 99999], spec2:["256GB", "12GB", 129999]},
       {images: [showcaseimage7_1, showcaseimage7_2, showcaseimage7_3, showcaseimage7_4],
-      header:'Galaxy Tab S7 FE (Wi-Fi, 4GB RAM)', colors:['black', 'green', 'light black', 'pink'], price:34999, type:'mobile'}, 
-      {images: [showcaseimage8], header:'Galaxy Book3 Pro, 35.56cm (14"), i7, 16GB, Intel Xe Graphics', colors:['grey'], price:143990, type:'laptop'}],
+      header:'Galaxy Tab S7 FE (Wi-Fi, 4GB RAM)', colors:['black', 'green', 'light black', 'pink'], type:'tablet', spec1:["128GB", "8GB", 34999], spec2:["256GB", "12GB", 64999]}, 
+      {images: [showcaseimage8], header:'Galaxy Book3 Pro, 35.56cm (14"), i7, 16GB, Intel Xe Graphics', colors:['grey'], price:143990, type:'tablet', spec1:["128GB", "8GB", 143990], spec2:["256GB", "12GB", 173990]}],
       
-      [{images:[showcaseimage1], header:'Galaxy Book3, 39.62cm (15.6"), i5, 8GB, Intel Xe Graphics', colors:["light black"], price:74990, type:'laptop'}, 
-      {images: [showcaseimage2, showcaseimage2_2, showcaseimage2_3], header:'Galaxy Tab S8 (Wi-Fi)', colors:["pink", "black", "grey"], price:58990, type:'tablet'}],
+      [{images:[showcaseimage1], header:'Galaxy Book3, 39.62cm (15.6"), i5, 8GB, Intel Xe Graphics', colors:["light black"], type:'tablet', spec1:["128GB", "8GB", 74990], spec2:["256GB", "12GB", 104990]}, 
+      {images: [showcaseimage2, showcaseimage2_2, showcaseimage2_3], header:'Galaxy Tab S8 (Wi-Fi)', colors:["pink", "black", "grey"], type:'tablet', spec1:["128GB", "8GB", 58990], spec2:["256GB", "12GB", 88990]}],
       
-      [{images:[showcaseimage1], header:'Galaxy Book3, 39.62cm (15.6"), i5, 8GB, Intel Xe Graphics', colors:["light black"], price:74990, type:'laptop'}, 
-      {images: [showcaseimage2, showcaseimage2_2, showcaseimage2_3], header:'Galaxy Tab S8 (Wi-Fi)', colors:["pink", "black", "grey"], price:58990, type:'tablet'},
-      {images: [showcaseimage3], header:'86.8cm (34") G8 OLED Gaming Monitor with 0.1ms response', colors:['grey'], price:109399, type:'tv'}],
+      [{images:[showcaseimage1], header:'Galaxy Book3, 39.62cm (15.6"), i5, 8GB, Intel Xe Graphics', colors:["light black"], type:'tablet', spec1:["128GB", "8GB", 74990], spec2:["256GB", "12GB", 104990]}, 
+      {images: [showcaseimage2, showcaseimage2_2, showcaseimage2_3], header:'Galaxy Tab S8 (Wi-Fi)', colors:["pink", "black", "grey"], type:'tablet', spec1:["128GB", "8GB", 58990], spec2:["256GB", "12GB", 88990]},
+      {images: [showcaseimage3], header:'86.8cm (34") G8 OLED Gaming Monitor with 0.1ms response', colors:['grey'], price:109399, type:'tv', spec1:["34''", "FHD", 109399], spec2:["45''", "QHD", 139399]}],
       
-      [{images:[showcaseimage1], header:'Galaxy Book3, 39.62cm (15.6"), i5, 8GB, Intel Xe Graphics', colors:["light black"], price:74990, type:'laptop'}, 
-      {images: [showcaseimage2, showcaseimage2_2, showcaseimage2_3], header:'Galaxy Tab S8 (Wi-Fi)', colors:["pink", "black", "grey"], price:58990, type:'tablet'},
-      {images: [showcaseimage3], header:'86.8cm (34") G8 OLED Gaming Monitor with 0.1ms response', colors:['grey'], price:109399, type:'tv'},
-      {images: [showcaseimage4], header:'80.0cm (32") Gaming Monitor with WQHD resolution, 240Hz refresh rate', colors:['grey'], price:35135, type:'tv'}],
+      [{images:[showcaseimage1], header:'Galaxy Book3, 39.62cm (15.6"), i5, 8GB, Intel Xe Graphics', colors:["light black"], type:'tablet', spec1:["128GB", "8GB", 74990], spec2:["256GB", "12GB", 104990]}, 
+      {images: [showcaseimage2, showcaseimage2_2, showcaseimage2_3], header:'Galaxy Tab S8 (Wi-Fi)', colors:["pink", "black", "grey"], type:'tablet', spec1:["128GB", "8GB", 58990], spec2:["256GB", "12GB", 88990]},
+      {images: [showcaseimage3], header:'86.8cm (34") G8 OLED Gaming Monitor with 0.1ms response', colors:['grey'], price:109399, type:'tv', spec1:["34''", "FHD", 109399], spec2:["45''", "QHD", 139399]},
+      {images: [showcaseimage4], header:'80.0cm (32") Gaming Monitor with WQHD resolution, 240Hz refresh rate', colors:['grey'], type:'tv', spec1:["34''", "FHD", 109399], spec2:["45''", "QHD", 139399]}],
       
-       [{images:[showcaseimage1], header:'Galaxy Book3, 39.62cm (15.6"), i5, 8GB, Intel Xe Graphics', colors:["light black"], price:74990}, 
-      {images: [showcaseimage2, showcaseimage2_2, showcaseimage2_3], header:'Galaxy Tab S8 (Wi-Fi)', colors:["pink", "black", "grey"], price:58990},
-      {images: [showcaseimage3], header:'86.8cm (34") G8 OLED Gaming Monitor with 0.1ms response', colors:['grey'], price:109399},
-      {images: [showcaseimage4], header:'80.0cm (32") Gaming Monitor with WQHD resolution, 240Hz refresh rate', colors:['grey'], price:35135}, 
-      {images: [showcaseimage5, showcaseimage5, showcaseimage5], header: 'Galaxy Tab S6 Lite (Wi-Fi, 4GB)', colors:["grey","blue", "pink"], price:31999}],
+       [{images:[showcaseimage1], header:'Galaxy Book3, 39.62cm (15.6"), i5, 8GB, Intel Xe Graphics', colors:["light black"], type:'tablet', spec1:["128GB", "8GB", 74990], spec2:["256GB", "12GB", 104990]}, 
+      {images: [showcaseimage2, showcaseimage2_2, showcaseimage2_3], header:'Galaxy Tab S8 (Wi-Fi)', colors:["pink", "black", "grey"], type:'tablet', spec1:["128GB", "8GB", 58990], spec2:["256GB", "12GB", 88990]},
+      {images: [showcaseimage3], header:'86.8cm (34") G8 OLED Gaming Monitor with 0.1ms response', colors:['grey'], price:109399, type:'tv', spec1:["34''", "FHD", 109399], spec2:["45''", "QHD", 139399]},
+      {images: [showcaseimage4], header:'80.0cm (32") Gaming Monitor with WQHD resolution, 240Hz refresh rate', colors:['grey'], type:'tv', spec1:["34''", "FHD", 109399], spec2:["45''", "QHD", 139399]}, 
+      {images: [showcaseimage5, showcaseimage5, showcaseimage5], header: 'Galaxy Tab S6 Lite (Wi-Fi, 4GB)', colors:["grey","blue", "pink"], type:'tablet', spec1:["128GB", "8GB", 31999], spec2:["256GB", "12GB", 34999]}],
       
-      [{images:[showcaseimage1], header:'Galaxy Book3, 39.62cm (15.6"), i5, 8GB, Intel Xe Graphics', colors:["light black"], price:74990, type:'laptop'}, 
-      {images: [showcaseimage2, showcaseimage2_2, showcaseimage2_3], header:'Galaxy Tab S8 (Wi-Fi)', colors:["pink", "black", "grey"], price:58990, type:'tablet'},
-      {images: [showcaseimage3], header:'86.8cm (34") G8 OLED Gaming Monitor with 0.1ms response', colors:['grey'], price:109399, type:'tv'},
-      {images: [showcaseimage4], header:'80.0cm (32") Gaming Monitor with WQHD resolution, 240Hz refresh rate', colors:['grey'], price:35135, type:'tv'}, 
-      {images: [showcaseimage5, showcaseimage5, showcaseimage5], header: 'Galaxy Tab S6 Lite (Wi-Fi, 4GB)', colors:["grey","blue", "pink"], price:31999, type:'tablet'}, 
-      {images: [showcaseimage6], header:"Galaxy Tab S8 Ultra (Wi-Fi)", colors:["grey"], price:99999, type:'tablet'},
+      [{images:[showcaseimage1], header:'Galaxy Book3, 39.62cm (15.6"), i5, 8GB, Intel Xe Graphics', colors:["light black"], type:'tablet', spec1:["128GB", "8GB", 74990], spec2:["256GB", "12GB", 104990]}, 
+      {images: [showcaseimage2, showcaseimage2_2, showcaseimage2_3], header:'Galaxy Tab S8 (Wi-Fi)', colors:["pink", "black", "grey"], type:'tablet', spec1:["128GB", "8GB", 58990], spec2:["256GB", "12GB", 88990]},
+      {images: [showcaseimage3], header:'86.8cm (34") G8 OLED Gaming Monitor with 0.1ms response', colors:['grey'], price:109399, type:'tv', spec1:["34''", "FHD", 109399], spec2:["45''", "QHD", 139399]},
+      {images: [showcaseimage4], header:'80.0cm (32") Gaming Monitor with WQHD resolution, 240Hz refresh rate', colors:['grey'], type:'tv', spec1:["34''", "FHD", 109399], spec2:["45''", "QHD", 139399]}, 
+      {images: [showcaseimage5, showcaseimage5, showcaseimage5], header: 'Galaxy Tab S6 Lite (Wi-Fi, 4GB)', colors:["grey","blue", "pink"], type:'tablet', spec1:["128GB", "8GB", 31999], spec2:["256GB", "12GB", 34999]}, 
+      {images: [showcaseimage6], header:"Galaxy Tab S8 Ultra (Wi-Fi)", colors:["grey"], type:'tablet', spec1:["128GB", "8GB", 99999], spec2:["256GB", "12GB", 129999]},
       {images: [showcaseimage7_1, showcaseimage7_2, showcaseimage7_3, showcaseimage7_4],
-      header:'Galaxy Tab S7 FE (Wi-Fi, 4GB RAM)', colors:['black', 'green', 'light black', 'pink'], price:34999, type:'mobile'}, 
-      {images: [showcaseimage8], header:'Galaxy Book3 Pro, 35.56cm (14"), i7, 16GB, Intel Xe Graphics', colors:['grey'], price:143990, type:'laptop'}]
+      header:'Galaxy Tab S7 FE (Wi-Fi, 4GB RAM)', colors:['black', 'green', 'light black', 'pink'], type:'tablet', spec1:["128GB", "8GB", 34999], spec2:["256GB", "12GB", 64999]}, 
+      {images: [showcaseimage8], header:'Galaxy Book3 Pro, 35.56cm (14"), i7, 16GB, Intel Xe Graphics', colors:['grey'], price:143990, type:'tablet', spec1:["128GB", "8GB", 143990], spec2:["256GB", "12GB", 173990]}]
       
       ]
     }
@@ -104,7 +105,7 @@ export class Displays extends React.Component{
   
   insertShowcaseElements(){
     return this.state.ssElements[this.state.showcaseindex].map(element => 
-      <ShowcaseGridItem images={element.images} colors={element.colors} header={element.header} price={element.price} type={element.type}/>)
+      <ShowcaseGridItem navhook={this.navigationHook} images={element.images} colors={element.colors} header={element.header} price={element.spec1[2]} type={element.type} spec1={element.spec1} spec2={element.spec2}/>)
   }
   
   render(){
@@ -143,7 +144,7 @@ export class Displays extends React.Component{
     
       <h1 className={styles.headers}> Ultimate school bundles </h1>
       
-      <Lowershowcase />
+      <Lowershowcase navhook={this.navigationHook}/>
       
       <div  className={styles.conditions}> 
       <p> It's time for you to stock up on all your favourite Samsung products and unfold the right tools for your future. Samsung's Back to School sale features amazing discounts on laptops, tablets, and monitors. You can also earn discounts and offers by referring friends and family! Unleash your school spirit and grab great deals. </p>

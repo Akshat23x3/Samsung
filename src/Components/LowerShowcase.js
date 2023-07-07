@@ -9,24 +9,24 @@ import lowergridimage4 from "./ShopComponents/Extras/lowergrid4.webp"
 
 export class Lowershowcase extends React.Component{
   
-  constructor(){
-    super()
-    
+  constructor(props){
+    super(props)
+    this.navigationHook=props.navhook
     
   }
   
   render(){
-    
     return(
     <div class={`${styles.gridseries} ${styles.showcase}`}>
     
-    <ShowcaseGridItem images={[lowergridimage1]} colors={[0]} header={"Galaxy Book3 Ultra"} price={"Get Odyssey OLED G8 Gaming Monitor @ Rs.31999"}
+    <ShowcaseGridItem navhook={this.navigationHook} images={[lowergridimage1]} colors={[0]} header={'Galaxy Book3'} price={31999} type={'tablet'} spec1={["128GB", "8GB", 74990]} spec2={["256GB", "12GB", 104990]}
     />
-    <ShowcaseGridItem images={[lowergridimage2]} colors={[0]} header={"Galaxy Book3 Ultra"} price={"Get Smartcover Keyboardat 60% off*"}
+    <ShowcaseGridItem navhook={this.navigationHook} images={[lowergridimage2]} colors={[0]} header={'Galaxy Book3 Ultra'} price={31999} type={'tablet'} spec1={["128GB", "8GB", 74990]} spec2={["256GB", "12GB", 104990]}
     />
-    <ShowcaseGridItem images={[lowergridimage3]} colors={[0]} header={"Galaxy Book3 Ultra"} price={"Get Book Cover @Rs.999"}
+    <ShowcaseGridItem navhook={this.navigationHook} images={[lowergridimage3]} colors={[0]} header={'Galaxy Book3 Ultra'} price={31999}  type={'tablet'} spec1={["128GB", "8GB", 74990]} spec2={["256GB", "12GB", 104990]}
     />
-    <ShowcaseGridItem images={[lowergridimage4]} colors={[0]} header={"Galaxy Book3 Ultra"} price={"Get Odyssey OLED G8 Gaming Monitor @ Rs.31999"}
+    <ShowcaseGridItem navhook={this.navigationHook} images={[lowergridimage4]} colors={[0]} header={'Galaxy Book3 Ultra'} price={31999} type={'tablet'} spec1={["128GB", "8GB", 74990]} spec2={["256GB", "12GB", 104990]}
+    />
     />
     
     </div>

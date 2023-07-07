@@ -1,12 +1,12 @@
 import React from 'react'
 import {Navbar} from "./ShopComponents/Navbar"
 
-export const Shop = () => {
+export const Shop = (props) => {
 
 return(
 
 <div>
-<Navbar />
+<Navbar navhook={props.navhook}/>
 </div>
 
 )

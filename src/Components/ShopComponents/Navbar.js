@@ -28,14 +28,13 @@ import watchHeader from "./Extras/watchHeader.webp"
 import wmHeader from "./Extras/wmHeader.webp"
 
 export class Navbar extends React.Component{
-constructor(){
-super()
+constructor(props){
+super(props)
 
 this.state={
   linkIndex:0,
-  links:[<Topdeals/>, <Bespoke/>, <Mobile/>, <Television/>,
-  <Refigerator/>, <WashingMachine/>, <Airconditioners/>, <Tab/>,
-  <Laptops/>, <Kitchencare/>, <Accessories/>]
+  links:[<Topdeals navhook={props.navhook}/>, <Bespoke navhook={props.navhook}/>, <Mobile navhook={props.navhook}/>, <Television navhook={props.navhook}/>, <Refigerator navhook={props.navhook}/>, <WashingMachine navhook={props.navhook}/>, <Airconditioners navhook={props.navhook}/>, <Tab navhook={props.navhook}/>,
+  <Laptops navhook={props.navhook}/>, <Kitchencare navhook={props.navhook}/>, <Accessories navhook={props.navhook}/>]
   // , <Bespoke/>, <Mobile/>, <Television/>, <Refigerators/>,
   // <Washingmachine/>, <Airconditioner/>, <Tablets/>, <Laptops/>, <Kitchen/>,
   // <Accessories/>]

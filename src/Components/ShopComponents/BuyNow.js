@@ -15,6 +15,7 @@ export class BuyNow extends React.Component{
   constructor(props){
     super(props)
     this.locationHook=props.myHookValue
+    this.navigationHook=props.navhook
     
     this.state={
       exchange:false,
@@ -242,10 +243,8 @@ export class BuyNow extends React.Component{
       {this.renderOffers(this.state.careplusIndex, this.state.samsungCare)}
       </div>
       
-      <button className={styles.continueBtn} onClick={() => {
-        const url = '/Checkout?';
-        window.open(url+`color=${this.state.colors[this.state.colorIndex]}&name=${this.state.device}&price=${this.state.price}&spec=${this.state.specs[this.state.storageindex]}&image=${this.state.images[this.state.colorIndex]}&exchange=${this.state.exchangeIndex}&offer=${this.state.offers[this.state.offerIndex].name},${this.state.offers[this.state.offerIndex].price}&careplus=${this.state.samsungCare[this.state.careplusIndex].name},${this.state.samsungCare[this.state.careplusIndex].price}&delivery=${this.state.deliveryDetails}`, '_blank');
-      }}> Continue </button>
+      <button className={styles.continueBtn} onClick={() => this.navigationHook(`/Samsung/Checkout?color=${this.state.colors[this.state.colorIndex]}&name=${this.state.device}&price=${this.state.price}&spec=${this.state.specs[this.state.storageindex]}&image=${this.state.images[this.state.colorIndex]}&exchange=${this.state.exchangeIndex}&offer=${this.state.offers[this.state.offerIndex].name},${this.state.offers[this.state.offerIndex].price}&careplus=${this.state.samsungCare[this.state.careplusIndex].name},${this.state.samsungCare[this.state.careplusIndex].price}&delivery=${this.state.deliveryDetails}`)
+      }> Continue </button>
       
       </div>
       </div>

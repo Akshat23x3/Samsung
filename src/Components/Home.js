@@ -5,14 +5,14 @@ import {Showcase} from "./HomeComponents/Showcase"
 import {Explore} from "./HomeComponents/Explore"
 import {Footer} from "./HomeComponents/Footer"
 
-export const Home = () => {
+export const Home = (props) => {
 
 
 return(
 
 <React.Fragment>
 <ImageSlider />
-<Highlights />
+<Highlights navhook={props.navhook}/>
 <Showcase />
 <Explore />
 <Footer />

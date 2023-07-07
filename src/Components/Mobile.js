@@ -36,9 +36,10 @@ import showcaseimageFD2_4 from "./ShopComponents/Extras/showcaseimageFD2_3.webp"
 
 
 export class Mobile extends React.Component{
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     
+    this.navigationHook = props.navhook
     this.state={
       index:0,
       imageslider:[image1, image2, image3],
@@ -110,7 +111,7 @@ export class Mobile extends React.Component{
   
   insertShowcaseElements(){
     return this.state.ssElements[this.state.showcaseindex].map(element => 
-      <ShowcaseGridItem images={element.images} colors={element.colors} header={element.header}  price={element.spec1[2]} type={element.type} spec1={element.spec1} spec2={element.spec2}/>)
+      <ShowcaseGridItem navhook={this.navigationHook} images={element.images} colors={element.colors} header={element.header}  price={element.spec1[2]} type={element.type} spec1={element.spec1} spec2={element.spec2}/>)
   }
   
   render(){
@@ -149,7 +150,7 @@ export class Mobile extends React.Component{
     
       <h1 className={styles.headers}> Ultimate school bundles </h1>
       
-      <Lowershowcase />
+      <Lowershowcase navhook={this.navigationHook} />
       
       <div  className={styles.conditions}> 
       <p> It's time for you to stock up on all your favourite Samsung products and unfold the right tools for your future. Samsung's Back to School sale features amazing discounts on laptops, tablets, and monitors. You can also earn discounts and offers by referring friends and family! Unleash your school spirit and grab great deals. </p>

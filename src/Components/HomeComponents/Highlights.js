@@ -6,10 +6,14 @@ import homeApps from './Extras/homeapplianceshigh.jpg'
 import tv from './Extras/tvhigh.jpg'
 import laptop from './Extras/laptophigh.jpg'
 
+import {useNavigate} from "react-router-dom"
+
+
 export class Highlights extends React.Component{
 
-constructor(){
-super()
+constructor(props){
+super(props)
+this.navigationHook = props.navhook
 this.hover = false;
 this.state = {
 images: [tabs8, homeApps, tv, laptop]
@@ -20,10 +24,7 @@ renderHighlights(){
 return this.state.images.map(
 image => <div className={`${styles.grid_item}`} onMouseOver={() => this.OnHover()}>
 <img src={image}/>
-<button className={styles.booknowBtn} onClick={() => {
-        const url = '/Shop';
-        window.open(url, '_blank');
-      }}> Book Now </button>
+<button className={styles.booknowBtn} onClick={() => this.navigationHook('/Samsung/Shop')}> Book Now </button>
 </div>
 )
 }
@@ -40,10 +41,7 @@ return(
 {() => {this.hover = true}}
 <div className={`${styles.grid_item} ${styles.biggerHighlight}`} onMouseOver={() => this.OnHover()}>
 <img src={S23lime} alt="S23Lime" />
-<button className={styles.booknowBtn} onClick={() => {
-        const url = '/Shop';
-        window.open(url, '_blank');
-      }}> Book Now </button>
+<button className={styles.booknowBtn} onClick={() => this.navigationHook('/Samsung/Shop')}> Book Now </button>
 </div>
 {this.renderHighlights()}
 </div>
