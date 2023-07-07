@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Samsung/static/css/main.e24cced2.css",
-    "main.js": "/Samsung/static/js/main.33685626.js",
+    "main.js": "/Samsung/static/js/main.57a3c51b.js",
     "static/media/tvfast.jpg": "/Samsung/static/media/tvfast.d2719cea792dc4320fcc.jpg",
     "static/media/tvFrame.png": "/Samsung/static/media/tvFrame.205d14849d142016be16.png",
     "static/media/ecobubble.jpg": "/Samsung/static/media/ecobubble.5323347837a9bd0a499b.jpg",
@@ -97,10 +97,10 @@
     "static/media/tv.webp": "/Samsung/static/media/tv.53027a40381dce86a8fd.webp",
     "static/media/mobile.webp": "/Samsung/static/media/mobile.f27d7f1c68547c4902c2.webp",
     "main.e24cced2.css.map": "/Samsung/static/css/main.e24cced2.css.map",
-    "main.33685626.js.map": "/Samsung/static/js/main.33685626.js.map"
+    "main.57a3c51b.js.map": "/Samsung/static/js/main.57a3c51b.js.map"
   },
   "entrypoints": [
     "static/css/main.e24cced2.css",
-    "static/js/main.33685626.js"
+    "static/js/main.57a3c51b.js"
   ]
 }

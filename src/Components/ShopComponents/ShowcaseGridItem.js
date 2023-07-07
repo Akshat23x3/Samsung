@@ -32,7 +32,7 @@ export class ShowcaseGridItem extends React.Component{
       {this.insertButton()}
       <p> Rs. {this.state.price}.00</p>
       <button className={styles.buynow} onClick={() => {
-        const url = '/Samsung/BuyNow?';
+        const url = '/BuyNow?';
         window.open(url+`colors=${this.state.colors}&name=${this.state.header}&price=${this.state.price}&type=${this.state.deviceType}&images=${this.state.images}&spec1=${this.state.spec1}&spec2=${this.state.spec2}`, '_blank');
       }}> Buy Now </button>
       </div>

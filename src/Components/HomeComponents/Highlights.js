@@ -21,7 +21,7 @@ return this.state.images.map(
 image => <div className={`${styles.grid_item}`} onMouseOver={() => this.OnHover()}>
 <img src={image}/>
 <button className={styles.booknowBtn} onClick={() => {
-        const url = '/Samsung/Shop';
+        const url = '/Shop';
         window.open(url, '_blank');
       }}> Book Now </button>
 </div>
@@ -41,7 +41,7 @@ return(
 <div className={`${styles.grid_item} ${styles.biggerHighlight}`} onMouseOver={() => this.OnHover()}>
 <img src={S23lime} alt="S23Lime" />
 <button className={styles.booknowBtn} onClick={() => {
-        const url = '/Samsung/Shop';
+        const url = '/Shop';
         window.open(url, '_blank');
       }}> Book Now </button>
 </div>
