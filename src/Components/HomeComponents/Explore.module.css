@@ -1,0 +1,65 @@
+.exploreContainer{
+display: flex;
+width:100rem;
+height: 50rem;
+background:none;
+padding-left:3rem;
+padding-right:3rem;
+border-radius:3rem;
+}
+
+.header{
+width:100rem;
+margin-left:auto;
+margin-right:auto;
+text-align:center;
+padding:3rem;
+transition: 0.4s;
+
+&:hover{
+  color:white;
+}
+}
+
+.image{
+width:55rem;
+transition:0.8s;
+overflow:hidden;
+
+&:hover{
+transform:scale(1.05);
+}
+}
+
+.querryButtons ol{
+box-sizing: border-box;
+list-style-font: 20rem;
+position:relative;
+margin-top:10rem;
+margin-left:1rem;
+left: 1rem;
+padding:0;
+}
+
+
+
+.querryButtons ol li h1{
+width:inherit;
+height:5rem;
+font-size:1.3rem;
+font-weight:400;
+transition:0.3s;
+
+
+&:hover{
+border-top:3px solid black;
+border-bottom:1px solid gray;
+font-weight:700;
+}
+
+&:hover .image{
+border-top:3px solid black;
+border-bottom:1px solid gray;
+font-weight:700;
+}
+}

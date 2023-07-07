@@ -1,0 +1,76 @@
+.highlights{
+  width: 100rem;
+box-sizing: border-box;
+margin-top:3rem;
+margin-left: auto;
+margin-right: auto;
+}
+
+header{
+text-align: center;
+white-space: nowrap;
+margin-left: auto;
+margin-right: auto;
+font-size: 2.5rem;
+font-weight: 600;
+transition: 0.3s
+}
+
+header:hover{
+border-bottom: 3px solid black;
+}
+
+.container{
+position: relative;
+box-sizing: border-box;
+display: grid;
+grid-template-rows: repeat(2, 1fr);
+grid-template-columns: repeat(4, 1fr);
+margin:3rem;
+grid-gap: 1.5rem;
+
+}
+
+.grid_item{
+box-sizing: border-box;
+height: inherit;
+border-radius: 2rem;
+text-align:center;
+transition: 0.8s
+}
+
+.grid_item:hover{
+transform:scale(1.05);
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.biggerHighlight{
+height: inherit;
+grid-row:span 2;
+grid-column:span 2;
+}
+
+img{
+width: 100%;
+height: 100%;
+border-radius: inherit;
+}
+
+.booknowBtn{
+position: relative;
+top: -5rem;
+font-size: 0.8rem;
+background:transparent;
+border:0;
+color:rgba(0, 0, 0, 0);
+width: 5rem;
+height: 1.5rem;
+transition: 0.5s;
+border-radius: 1rem;
+}
+
+.grid_item:hover .booknowBtn{
+background:black;
+color:white;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}

@@ -1,0 +1,61 @@
+.slider{
+overflow: hidden;
+box-sizing: border-box;
+width: 100rem;
+height: 30rem;
+background-color: black;
+display: flex;
+}
+
+.slider_btn{
+box-sizing: border-box;
+width: 5rem;
+height: 5rem;
+margin-top: auto;
+margin-bottom: auto;
+border: 0;
+background: none;
+}
+
+.slider_btn_image{
+width: 2.7rem;
+height: 2.7rem;
+background: rgba(180, 180, 180, 0.3);
+margin: none;
+border: 0;
+border-radius: 80rem;
+
+&:hover{
+  background: rgba(255, 255, 255, 0.8);
+}
+}
+
+
+.images{
+display: block;
+margin-left: 0;
+margin-right: 0;
+width: 80rem;
+height: 30rem;
+transition: transform .8s; /* Animation */
+}
+
+.images:hover{
+box-sizing: border-box;
+transform: scale(1.05);
+}
+
+.productDescription{
+position: relative;
+top:20rem;
+width: 50rem;
+text-align: right;
+color: white;
+}
+
+.productHeader{
+position: relative;
+text-align: right;
+font-size: 2.5rem;
+font-weight: 700;
+}

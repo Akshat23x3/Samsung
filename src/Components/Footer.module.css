@@ -1,0 +1,34 @@
+.footer{
+width:95%;
+margin:3rem;
+border-top:1px solid black;
+}
+
+.footer p{
+font-size:0.8rem;
+width:50%;
+}
+
+.footer .upper{
+padding-bottom:0.8rem;
+border-bottom:1px solid black;
+}
+
+.footer .lower{
+display:flex;
+}
+
+.footer .lower ul{
+display:flex;
+margin-left:-40vw;
+border-left:1px solid black;
+}
+
+.footer .lower ul li button{
+background:none;
+border:none;
+position:relative;
+&:hover{
+color:red;
+}
+}
